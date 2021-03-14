@@ -5,8 +5,10 @@ import PostService from "../services/postService";
 
 class PostController {
 
+  
   public router: Router;
   private postService: PostService;
+
 
   constructor() {
     
@@ -26,7 +28,7 @@ class PostController {
   
   public create = async (req: Request, res: Response) => {
     
-    throw new Error("In your face")
+    res.send( this.postService.create() )
 
   }
 
